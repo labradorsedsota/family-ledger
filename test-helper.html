@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>FEB Test Helper</title>
+  <style>
+    body { font-family: system-ui; padding: 40px; color: #1e293b; }
+    #status { font-size: 18px; margin: 20px 0; }
+    .ok { color: #10b981; }
+    .err { color: #ef4444; }
+  </style>
+</head>
+<body>
+  <h2>FEB Test Data Injector</h2>
+  <p id="status">Processing...</p>
+  <script>
+    async function run() {
+      const status = document.getElementById('status');
+      const params = new URLSearchParams(window.location.search);
+      const fixtureName = params.get('fixture');
+      const action = params.get('action') || 'inject';
+      const noRedirect = params.get('stay') === '1';
+
+      function done(msg) {
+        status.className = 'ok';
+        status.textContent = msg;
+        if (!noRedirect) {
+          setTimeout(() => { window.location.href = './'; }, 600);
+        }
+      }
+
+      // Action: clear localStorage
+      if (action === 'clear' || (!fixtureName && !window.location.hash.slice(1))) {
+        localStorage.clear();
+        done('localStorage cleared. Redirecting...');
+        return;
+      }
+
+      // Action: inject from fixture file
+      if (fixtureName) {
+        try {
+          const resp = await fetch('./test/fixtures/' + fixtureName);
+          if (!resp.ok) throw new Error('HTTP ' + resp.status);
+          const data = await resp.json();
+          localStorage.clear();
+          if (data.feb_records) {
+            localStorage.setItem('feb_records', JSON.stringify(data.feb_records));
+          }
+          if (data.feb_budget !== null && data.feb_budget !== undefined) {
+            localStorage.setItem('feb_budget', JSON.stringify(data.feb_budget));
+          }
+          done('Fixture "' + fixtureName + '" injected (' +
+               (data.feb_records ? data.feb_records.length : 0) + ' records, budget=' +
+               (data.feb_budget || 'null') + '). Redirecting...');
+        } catch (e) {
+          status.className = 'err';
+          status.textContent = 'Error loading fixture: ' + e.message;
+        }
+        return;
+      }
+
+      // Action: inject from URL hash (inline JSON)
+      const hash = window.location.hash.slice(1);
+      if (hash) {
+        try {
+          const data = JSON.parse(decodeURIComponent(hash));
+          localStorage.clear();
+          if (data.feb_records) {
+            localStorage.setItem('feb_records', JSON.stringify(data.feb_records));
+          }
+          if (data.feb_budget !== null && data.feb_budget !== undefined) {
+            localStorage.setItem('feb_budget', JSON.stringify(data.feb_budget));
+          }
+          done('Hash data injected. Redirecting...');
+        } catch (e) {
+          status.className = 'err';
+          status.textContent = 'Error parsing hash: ' + e.message;
+        }
+      }
+    }
+    run();
+  </script>
+</body>
+</html>
