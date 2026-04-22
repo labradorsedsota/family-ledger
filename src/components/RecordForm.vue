@@ -186,15 +186,17 @@ async function handleSubmit() {
 <style scoped>
 .record-form-card {
   background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  border: 2px solid #000;
+  box-shadow: 4px 4px 0 #000;
   padding: 20px;
 }
 
 .card-title {
+  font-family: 'Space Grotesk', sans-serif;
   font-size: 18px;
-  font-weight: 600;
-  color: #1e293b;
+  font-weight: 800;
+  color: #000;
   margin: 0 0 20px 0;
 }
 
@@ -213,14 +215,20 @@ async function handleSubmit() {
 .submit-btn {
   width: 100%;
   height: 40px;
+  font-family: 'Space Grotesk', sans-serif;
   font-size: 16px;
-  background-color: #2563eb;
-  border-color: #2563eb;
+  font-weight: 700;
+  background-color: #000 !important;
+  border-color: #000 !important;
+  color: #FFE156 !important;
+  border-radius: 6px !important;
+  box-shadow: 3px 3px 0 #555;
+  transition: all 0.15s ease;
 }
 
 .submit-btn:hover {
-  background-color: #1d4ed8;
-  border-color: #1d4ed8;
+  transform: translate(3px, 3px);
+  box-shadow: none !important;
 }
 
 :deep(.el-radio-group) {
@@ -228,23 +236,41 @@ async function handleSubmit() {
   gap: 20px;
 }
 
+:deep(.el-radio__inner) {
+  border-color: #000;
+}
+
 :deep(.el-radio.is-checked .el-radio__inner) {
-  background-color: #2563eb;
-  border-color: #2563eb;
+  background-color: #000;
+  border-color: #000;
 }
 
 :deep(.el-radio.is-checked .el-radio__label) {
-  color: #2563eb;
+  color: #000;
+  font-weight: 700;
 }
 
 :deep(.el-input__wrapper),
 :deep(.el-select__wrapper),
 :deep(.el-input-number) {
-  border-radius: 8px;
+  border-radius: 6px;
+  box-shadow: 2px 2px 0 #000 !important;
+  border: 2px solid #000 !important;
+}
+
+:deep(.el-input__wrapper:hover),
+:deep(.el-select__wrapper:hover) {
+  box-shadow: 2px 2px 0 #000 !important;
 }
 
 :deep(.el-input-number .el-input__wrapper) {
   padding-left: 11px;
   padding-right: 11px;
+}
+
+:deep(.el-form-item__label) {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  color: #000;
 }
 </style>

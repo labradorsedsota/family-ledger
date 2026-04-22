@@ -51,15 +51,23 @@ defineProps({
 <style scoped>
 .trend-card {
   background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  border: 2px solid #000;
+  box-shadow: 4px 4px 0 #000;
   padding: 20px;
+  transition: all 0.15s ease;
+}
+
+.trend-card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 #000;
 }
 
 .card-title {
+  font-family: 'Space Grotesk', sans-serif;
   font-size: 18px;
-  font-weight: 600;
-  color: #1e293b;
+  font-weight: 800;
+  color: #000;
   margin: 0 0 20px 0;
 }
 
@@ -77,29 +85,36 @@ defineProps({
 }
 
 .trend-label {
+  font-family: 'Space Grotesk', sans-serif;
   font-size: 13px;
-  color: #64748b;
+  color: #000;
+  font-weight: 700;
   min-width: 32px;
 }
 
 .trend-amount {
-  font-family: 'DIN Alternate', 'Roboto Mono', monospace;
+  font-family: 'Space Mono', monospace;
   font-size: 15px;
-  font-weight: 500;
+  font-weight: 700;
 }
 
-.trend-amount.income { color: #10b981; }
-.trend-amount.expense { color: #ef4444; }
+.trend-amount.income { color: #88D9A8; }
+.trend-amount.expense { color: #FF6B9D; }
 
 .balance-row {
   padding-top: 4px;
-  border-top: 1px solid #f1f5f9;
+  border-top: 2px solid #000;
   margin-top: 2px;
 }
 
 :deep(.el-timeline-item__timestamp) {
+  font-family: 'Space Grotesk', sans-serif;
   font-size: 14px;
-  font-weight: 600;
-  color: #1e293b;
+  font-weight: 700;
+  color: #000;
+}
+
+:deep(.el-timeline-item__node) {
+  border: 2px solid #000;
 }
 </style>

@@ -48,19 +48,27 @@ function getCategory(code) {
 
 <style scoped>
 .category-card {
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  background: #D4EDFC;
+  border-radius: 8px;
+  border: 2px solid #000;
+  box-shadow: 4px 4px 0 #000;
   padding: 20px;
   display: flex;
   flex-direction: column;
   gap: 12px;
+  transition: all 0.15s ease;
+}
+
+.category-card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 #000;
 }
 
 .card-title {
+  font-family: 'Space Grotesk', sans-serif;
   font-size: 14px;
-  color: #64748b;
-  font-weight: 500;
+  color: #000;
+  font-weight: 700;
 }
 
 .category-list {
@@ -83,36 +91,41 @@ function getCategory(code) {
 
 .category-name {
   flex: 1;
+  font-family: 'Space Grotesk', sans-serif;
   font-size: 13px;
-  color: #1e293b;
+  color: #000;
   font-weight: 500;
 }
 
 .category-amount {
+  font-family: 'Space Mono', monospace;
   font-size: 13px;
-  font-family: 'DIN Alternate', 'Roboto Mono', monospace;
-  color: #64748b;
+  color: #000;
   min-width: 80px;
   text-align: right;
+  font-weight: 700;
 }
 
 .category-pct {
+  font-family: 'Space Mono', monospace;
   font-size: 13px;
-  color: #2563eb;
-  font-weight: 600;
+  color: #000;
+  font-weight: 700;
   min-width: 42px;
   text-align: right;
 }
 
 .cat-progress {
-  border-radius: 100px;
+  border-radius: 4px;
 }
 
 :deep(.el-progress-bar__outer) {
-  border-radius: 100px;
-  background: #f1f5f9;
+  border-radius: 4px;
+  background: #E5E5E5;
+  border: 1px solid #000;
 }
 :deep(.el-progress-bar__inner) {
-  border-radius: 100px;
+  border-radius: 4px;
+  background: #7EC8E3;
 }
 </style>

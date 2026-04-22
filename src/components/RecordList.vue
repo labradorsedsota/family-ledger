@@ -128,8 +128,9 @@ async function handleDelete(record) {
 <style scoped>
 .record-list-card {
   background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  border: 2px solid #000;
+  box-shadow: 4px 4px 0 #000;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -138,9 +139,10 @@ async function handleDelete(record) {
 }
 
 .card-title {
+  font-family: 'Space Grotesk', sans-serif;
   font-size: 18px;
-  font-weight: 600;
-  color: #1e293b;
+  font-weight: 800;
+  color: #000;
 }
 
 /* ── 折叠面板样式 ── */
@@ -149,13 +151,15 @@ async function handleDelete(record) {
 }
 
 :deep(.el-collapse-item__header) {
-  background: #f8fafc;
-  border-radius: 8px;
+  background: #FFFDF0;
+  border-radius: 6px;
   padding: 8px 12px;
+  font-family: 'Space Grotesk', sans-serif;
   font-size: 14px;
-  font-weight: 600;
-  color: #1e293b;
+  font-weight: 700;
+  color: #000;
   border: none;
+  border-bottom: 2px solid #000;
   height: auto;
   line-height: 1.4;
 }
@@ -170,7 +174,7 @@ async function handleDelete(record) {
 
 :deep(.el-collapse-item) {
   border: none;
-  margin-bottom: 4px;
+  margin-bottom: 8px;
 }
 
 .group-title {
@@ -181,26 +185,33 @@ async function handleDelete(record) {
 }
 
 .group-date {
-  color: #1e293b;
-  font-weight: 600;
+  font-family: 'Space Grotesk', sans-serif;
+  color: #000;
+  font-weight: 700;
   font-size: 14px;
 }
 
 .group-expense {
   font-size: 13px;
-  color: #64748b;
-  font-weight: 400;
+  color: #000;
+  font-weight: 500;
 }
 
-.group-expense strong { color: #ef4444; }
+.group-expense strong {
+  font-family: 'Space Mono', monospace;
+  color: #FF6B9D;
+}
 
 .group-income {
   font-size: 13px;
-  color: #64748b;
-  font-weight: 400;
+  color: #000;
+  font-weight: 500;
 }
 
-.group-income strong { color: #10b981; }
+.group-income strong {
+  font-family: 'Space Mono', monospace;
+  color: #000;
+}
 
 /* ── 记录行 ── */
 .record-item {
@@ -208,12 +219,14 @@ async function handleDelete(record) {
   align-items: center;
   justify-content: space-between;
   padding: 10px 12px;
-  border-radius: 8px;
-  transition: background 0.15s;
+  border-radius: 6px;
+  border: 2px solid transparent;
+  transition: all 0.15s ease;
 }
 
 .record-item:hover {
-  background: #f8fafc;
+  background: #FFFDF0;
+  border-color: #000;
 }
 
 .record-main {
@@ -238,14 +251,15 @@ async function handleDelete(record) {
 }
 
 .record-category {
+  font-family: 'Space Grotesk', sans-serif;
   font-size: 14px;
-  font-weight: 500;
-  color: #1e293b;
+  font-weight: 700;
+  color: #000;
 }
 
 .record-note {
   font-size: 12px;
-  color: #94a3b8;
+  color: #555;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -259,15 +273,15 @@ async function handleDelete(record) {
 }
 
 .record-amount {
-  font-family: 'DIN Alternate', 'Roboto Mono', monospace;
+  font-family: 'Space Mono', monospace;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 700;
   min-width: 90px;
   text-align: right;
 }
 
-.amount-expense { color: #ef4444; }
-.amount-income  { color: #10b981; }
+.amount-expense { color: #FF6B9D; }
+.amount-income  { color: #000; }
 
 .record-actions {
   display: flex;
@@ -278,5 +292,16 @@ async function handleDelete(record) {
 
 .record-item:hover .record-actions {
   opacity: 1;
+}
+
+:deep(.el-button.is-circle) {
+  border: 2px solid #000 !important;
+  box-shadow: 2px 2px 0 #000;
+  transition: all 0.15s ease;
+}
+
+:deep(.el-button.is-circle:hover) {
+  transform: translate(2px, 2px);
+  box-shadow: none !important;
 }
 </style>

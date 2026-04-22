@@ -33,29 +33,37 @@ const amountClass = computed(() => {
 <style scoped>
 .stat-card {
   background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  border: 2px solid #000;
+  box-shadow: 4px 4px 0 #000;
   padding: 20px;
   display: flex;
   flex-direction: column;
   gap: 12px;
+  transition: all 0.15s ease;
+}
+
+.stat-card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 #000;
 }
 
 .stat-label {
+  font-family: 'Space Grotesk', sans-serif;
   font-size: 14px;
-  color: #64748b;
-  font-weight: 500;
+  color: #000;
+  font-weight: 700;
 }
 
 .stat-amount {
-  font-family: 'DIN Alternate', 'Roboto Mono', monospace;
+  font-family: 'Space Mono', monospace;
   font-size: 32px;
   font-weight: 700;
   letter-spacing: -0.5px;
   line-height: 1;
 }
 
-.amount-expense { color: #ef4444; }
-.amount-income  { color: #10b981; }
-.amount-neutral { color: #1e293b; }
+.amount-expense { color: #FF6B9D; }
+.amount-income  { color: #000; }
+.amount-neutral { color: #000; }
 </style>

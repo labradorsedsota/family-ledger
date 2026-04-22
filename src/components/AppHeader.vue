@@ -45,16 +45,19 @@ const isCurrentMonth = computed(() => props.currentMonth === getCurrentMonth())
   justify-content: space-between;
   align-items: center;
   padding: 16px 24px;
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  background: #FFE156;
+  border-radius: 8px;
+  border: 2px solid #000;
+  box-shadow: 4px 4px 0 #000;
   margin-bottom: 16px;
+  transition: all 0.15s ease;
 }
 
 .app-title {
+  font-family: 'Space Grotesk', sans-serif;
   font-size: 24px;
-  font-weight: 600;
-  color: #1e293b;
+  font-weight: 800;
+  color: #000;
   margin: 0;
 }
 
@@ -65,10 +68,26 @@ const isCurrentMonth = computed(() => props.currentMonth === getCurrentMonth())
 }
 
 .month-text {
+  font-family: 'Space Grotesk', sans-serif;
   font-size: 16px;
-  font-weight: 500;
-  color: #1e293b;
+  font-weight: 700;
+  color: #000;
   min-width: 100px;
   text-align: center;
+}
+
+:deep(.el-button) {
+  border: 2px solid #000 !important;
+  box-shadow: 3px 3px 0 #000;
+  border-radius: 6px !important;
+  background: #fff;
+  color: #000;
+  font-weight: 700;
+  transition: all 0.15s ease;
+}
+
+:deep(.el-button:hover) {
+  transform: translate(3px, 3px);
+  box-shadow: none !important;
 }
 </style>

@@ -70,14 +70,21 @@ const progressColor = computed(() => {
 
 <style scoped>
 .budget-card {
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  background: #E8DEFF;
+  border-radius: 8px;
+  border: 2px solid #000;
+  box-shadow: 4px 4px 0 #000;
   padding: 20px;
   display: flex;
   flex-direction: column;
   gap: 16px;
   height: 100%;
+  transition: all 0.15s ease;
+}
+
+.budget-card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 #000;
 }
 
 .budget-header {
@@ -87,9 +94,10 @@ const progressColor = computed(() => {
 }
 
 .budget-label {
+  font-family: 'Space Grotesk', sans-serif;
   font-size: 14px;
-  color: #64748b;
-  font-weight: 500;
+  color: #000;
+  font-weight: 700;
 }
 
 .no-budget {
@@ -114,7 +122,7 @@ const progressColor = computed(() => {
 }
 
 .percentage-num {
-  font-family: 'DIN Alternate', 'Roboto Mono', monospace;
+  font-family: 'Space Mono', monospace;
   font-size: 48px;
   font-weight: 700;
   line-height: 1;
@@ -122,19 +130,23 @@ const progressColor = computed(() => {
 }
 
 .percentage-sub {
+  font-family: 'Space Grotesk', sans-serif;
   font-size: 14px;
-  color: #64748b;
+  color: #000;
+  font-weight: 500;
 }
 
 .budget-progress {
-  border-radius: 100px;
+  border-radius: 4px;
 }
 
 :deep(.el-progress-bar__outer) {
-  border-radius: 100px;
+  border-radius: 4px;
+  background: #E5E5E5;
+  border: 1px solid #000;
 }
 :deep(.el-progress-bar__inner) {
-  border-radius: 100px;
+  border-radius: 4px;
   transition: width 0.6s ease, background-color 0.3s;
 }
 
@@ -142,23 +154,41 @@ const progressColor = computed(() => {
   display: flex;
   justify-content: space-between;
   font-size: 13px;
-  color: #64748b;
+  color: #000;
+  font-weight: 500;
 }
 
 .budget-text strong {
-  color: #1e293b;
-  font-weight: 600;
+  font-family: 'Space Mono', monospace;
+  color: #000;
+  font-weight: 700;
 }
 
 .over-budget-tag {
   display: inline-flex;
   align-items: center;
-  background: #fef2f2;
-  color: #ef4444;
-  border: 1px solid #fecaca;
+  background: #FF6B9D;
+  color: #fff;
+  border: 2px solid #000;
   border-radius: 6px;
   padding: 4px 10px;
   font-size: 13px;
-  font-weight: 500;
+  font-weight: 700;
+  box-shadow: 2px 2px 0 #000;
+}
+
+:deep(.el-button) {
+  border: 2px solid #000 !important;
+  box-shadow: 3px 3px 0 #000;
+  border-radius: 6px !important;
+  background: #fff;
+  color: #000;
+  font-weight: 700;
+  transition: all 0.15s ease;
+}
+
+:deep(.el-button:hover) {
+  transform: translate(3px, 3px);
+  box-shadow: none !important;
 }
 </style>

@@ -248,15 +248,15 @@ function handleEditSaved() {
 }
 
 body {
-  background-color: #f8fafc;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  color: #1e293b;
+  background-color: #FFFDF0;
+  font-family: 'Space Grotesk', sans-serif;
+  color: #000000;
   min-width: 900px;
 }
 
 .app {
   min-height: 100vh;
-  background: #f8fafc;
+  background: #FFFDF0;
   padding: 24px;
 }
 
@@ -274,11 +274,11 @@ body {
   margin-bottom: 16px;
 }
 
-.card-expense { grid-column: 1; grid-row: 1; }
-.card-income  { grid-column: 2; grid-row: 1; }
-.card-budget  { grid-column: 3; grid-row: 1 / 3; }
-.card-balance { grid-column: 1; grid-row: 2; }
-.card-category { grid-column: 2; grid-row: 2; }
+.card-expense { grid-column: 1; grid-row: 1; background: #FFD4E0 !important; }
+.card-income  { grid-column: 2; grid-row: 1; background: #C8F5D8 !important; }
+.card-budget  { grid-column: 3; grid-row: 1 / 3; background: #E8DEFF !important; }
+.card-balance { grid-column: 1; grid-row: 2; background: #FFF3C4 !important; }
+.card-category { grid-column: 2; grid-row: 2; background: #D4EDFC !important; }
 
 /* ── 操作区 ── */
 .action-grid {

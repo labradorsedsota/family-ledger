@@ -114,17 +114,64 @@ async function handleSave() {
 }
 
 .hint {
+  font-family: 'Space Grotesk', sans-serif;
   font-size: 12px;
-  color: #94a3b8;
+  color: #555;
+  font-weight: 500;
   margin-top: -8px;
 }
 
 :deep(.el-dialog) {
-  border-radius: 12px;
+  border-radius: 8px;
+  border: 2px solid #000;
+  box-shadow: 6px 6px 0 #000;
+}
+
+:deep(.el-dialog__title) {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 800;
+  color: #000;
 }
 
 :deep(.el-input__wrapper),
 :deep(.el-input-number) {
-  border-radius: 8px;
+  border-radius: 6px;
+  box-shadow: 2px 2px 0 #000 !important;
+  border: 2px solid #000 !important;
+}
+
+:deep(.el-form-item__label) {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  color: #000;
+}
+
+:deep(.el-button--primary) {
+  background-color: #000 !important;
+  border-color: #000 !important;
+  color: #FFE156 !important;
+  border-radius: 6px !important;
+  box-shadow: 3px 3px 0 #555;
+  font-weight: 700;
+  transition: all 0.15s ease;
+}
+
+:deep(.el-button--primary:hover) {
+  transform: translate(3px, 3px);
+  box-shadow: none !important;
+}
+
+:deep(.el-button--default) {
+  border: 2px solid #000 !important;
+  border-radius: 6px !important;
+  box-shadow: 3px 3px 0 #000;
+  color: #000;
+  font-weight: 700;
+  transition: all 0.15s ease;
+}
+
+:deep(.el-button--default:hover) {
+  transform: translate(3px, 3px);
+  box-shadow: none !important;
 }
 </style>
