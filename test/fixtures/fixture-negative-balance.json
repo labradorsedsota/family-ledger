@@ -1,0 +1,11 @@
+{
+  "feb_records": [
+    {"id":"ng01","type":"income","amount":3000.00,"category":"salary","date":"2026-04-15","note":"工资","createdAt":1744704000000,"updatedAt":1744704000000},
+    {"id":"ng02","type":"expense","amount":5000.00,"category":"food","date":"2026-04-16","note":"生活支出","createdAt":1744790400000,"updatedAt":1744790400000}
+  ],
+  "feb_budget": null,
+  "_meta": {
+    "description": "负结余场景：收入3000，支出5000，结余-2000（应显示红色）。匹配AC-03-03",
+    "used_by": ["L2-11b"]
+  }
+}

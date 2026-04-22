@@ -1,0 +1,12 @@
+{
+  "feb_records": [
+    {"id":"cr01","type":"expense","amount":2000.00,"category":"food","date":"2026-04-15","note":"本月餐饮","createdAt":1744704000000,"updatedAt":1744704000000},
+    {"id":"cr02","type":"expense","amount":500.00,"category":"transport","date":"2026-04-15","note":"本月交通","createdAt":1744704060000,"updatedAt":1744704060000},
+    {"id":"cr03","type":"expense","amount":1500.00,"category":"shopping","date":"2026-04-15","note":"本月购物","createdAt":1744704120000,"updatedAt":1744704120000}
+  ],
+  "feb_budget": null,
+  "_meta": {
+    "description": "三类支出匹配PRD AC-04-01：餐饮2000(50%)、购物1500(37.5%)、交通500(12.5%)，总计4000",
+    "used_by": ["L2-09"]
+  }
+}
