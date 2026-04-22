@@ -1,0 +1,11 @@
+{
+  "feb_records": [
+    {"id":"nb01","type":"expense","amount":2000.00,"category":"food","date":"2026-04-18","note":"餐饮总计","createdAt":1744963200000,"updatedAt":1744963200000},
+    {"id":"nb02","type":"expense","amount":1500.00,"category":"shopping","date":"2026-04-19","note":"购物总计","createdAt":1745049600000,"updatedAt":1745049600000}
+  ],
+  "feb_budget": null,
+  "_meta": {
+    "description": "支出记录总计3500（餐饮2000+购物1500），无预算。设置预算5000后进度应为70%",
+    "used_by": ["L2-06"]
+  }
+}

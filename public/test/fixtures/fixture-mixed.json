@@ -1,0 +1,16 @@
+{
+  "feb_records": [
+    {"id":"m01","type":"expense","amount":60.00,"category":"food","date":"2026-04-22","note":"午餐聚餐","createdAt":1745308800000,"updatedAt":1745308800000},
+    {"id":"m02","type":"expense","amount":40.00,"category":"transport","date":"2026-04-22","note":"打车","createdAt":1745308860000,"updatedAt":1745308860000},
+    {"id":"m03","type":"expense","amount":50.00,"category":"shopping","date":"2026-04-22","note":"日用品","createdAt":1745308920000,"updatedAt":1745308920000},
+    {"id":"m04","type":"income","amount":50.00,"category":"bonus","date":"2026-04-22","note":"加班补贴","createdAt":1745308980000,"updatedAt":1745308980000},
+    {"id":"m05","type":"expense","amount":150.00,"category":"shopping","date":"2026-04-21","note":"超市采购","createdAt":1745222400000,"updatedAt":1745222400000},
+    {"id":"m06","type":"income","amount":8000.00,"category":"salary","date":"2026-04-21","note":"4月工资","createdAt":1745222460000,"updatedAt":1745222460000},
+    {"id":"m07","type":"expense","amount":35.00,"category":"food","date":"2026-04-20","note":"晚餐","createdAt":1745136000000,"updatedAt":1745136000000}
+  ],
+  "feb_budget": null,
+  "_meta": {
+    "description": "混合记录：7条记录覆盖3个日期，含收支。4/22: 支出150 收入50; 4/21: 支出150 收入8000; 4/20: 支出35。总支出335，总收入8050，结余+7715",
+    "used_by": ["L1-03", "L1-04", "L2-03", "L3-03"]
+  }
+}

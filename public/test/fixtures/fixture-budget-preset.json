@@ -1,0 +1,11 @@
+{
+  "feb_records": [
+    {"id":"bp01","type":"expense","amount":2000.00,"category":"food","date":"2026-04-18","note":"餐饮","createdAt":1744963200000,"updatedAt":1744963200000},
+    {"id":"bp02","type":"expense","amount":1000.00,"category":"shopping","date":"2026-04-19","note":"购物","createdAt":1745049600000,"updatedAt":1745049600000}
+  ],
+  "feb_budget": 5000,
+  "_meta": {
+    "description": "预算5000 + 支出3000（餐饮2000+购物1000），进度60%。用于测试预算归零/清除",
+    "used_by": ["L2-07"]
+  }
+}

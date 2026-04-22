@@ -1,0 +1,11 @@
+{
+  "feb_records": [
+    {"id":"io01","type":"income","amount":5000.00,"category":"salary","date":"2026-04-15","note":"工资","createdAt":1744704000000,"updatedAt":1744704000000},
+    {"id":"io02","type":"income","amount":2000.00,"category":"bonus","date":"2026-04-20","note":"奖金","createdAt":1745136000000,"updatedAt":1745136000000}
+  ],
+  "feb_budget": null,
+  "_meta": {
+    "description": "仅收入记录（无任何支出），分类占比应显示Empty空状态",
+    "used_by": ["L3-02"]
+  }
+}

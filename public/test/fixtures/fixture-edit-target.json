@@ -1,0 +1,10 @@
+{
+  "feb_records": [
+    {"id":"e01","type":"expense","amount":100.00,"category":"food","date":"2026-04-22","note":"待修改","createdAt":1745308800000,"updatedAt":1745308800000}
+  ],
+  "feb_budget": null,
+  "_meta": {
+    "description": "单条待编辑支出记录：餐饮 ¥100.00，备注'待修改'，2026-04-22",
+    "used_by": ["L2-04", "L2-05"]
+  }
+}
