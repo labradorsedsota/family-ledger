@@ -96,7 +96,7 @@ import {
 } from './utils/format.js'
 
 const { records, deleteRecord } = useRecords()
-const { budget, getBudgetProgress } = useBudget()
+const { budget } = useBudget()
 
 const currentMonth = ref(getCurrentMonth())
 const showEditDialog = ref(false)
@@ -195,15 +195,12 @@ const trendData = computed(() => {
   })
 })
 
-// 预算进度
-const budgetProgress = computed(() => getBudgetProgress(totalExpense.value).value)
-
 // ── 超预算 Notification（每次打开页面最多一次）──
 let overBudgetShown = false
 watch(
-  () => budgetProgress.value.isOverBudget,
-  (isOver) => {
-    if (isOver && !overBudgetShown) {
+  [totalExpense, () => budget.value],
+  ([expense, budgetVal]) => {
+    if (budgetVal && budgetVal > 0 && expense > budgetVal && !overBudgetShown) {
       overBudgetShown = true
       ElNotification({
         title: '超预算提醒',
